@@ -1,0 +1,7 @@
+Serving on 127.0.0.1 12286
+Received "TEST" from 127.0.0.1 49154
+Sent "SUCCESS" to 127.0.0.1 49154
+Close the connection with 127.0.0.1 49154
+Received "FLOOD +0.000458479 shawn +34.068930-118.445127 1559628593.035082340 {"Holiday":{"Goloman":{"Hands":{}},"Wilkes":{}}} Holiday Wilkes" from 127.0.0.1 49162
+Sent "FLOOD succeeded" to 127.0.0.1 49162
+Close the connection with 127.0.0.1 49162

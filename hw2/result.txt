@@ -1,0 +1,81 @@
+# #use "hw1.ml";;
+val subset : 'a list -> 'a list -> bool = <fun>
+val equal_sets : 'a list -> 'a list -> bool = <fun>
+val set_union : 'a list -> 'a list -> 'a list = <fun>
+val set_intersection : 'a list -> 'a list -> 'a list = <fun>
+val set_diff : 'a list -> 'a list -> 'a list = <fun>
+val computed_fixed_point : ('a -> 'a -> bool) -> ('a -> 'a) -> 'a -> 'a =
+  <fun>
+type ('nonterminal, 'terminal) symbol = N of 'nonterminal | T of 'terminal
+val find_reachable : 'a -> ('a * ('a, 'b) symbol list) list -> 'a list =
+  <fun>
+val filter_reachable :
+  'a * ('a * ('a, 'b) symbol list) list ->
+  'a * ('a * ('a, 'b) symbol list) list = <fun>
+
+# #use "hw2.ml";;
+type ('nonterminal, 'terminal) symbol = N of 'nonterminal | T of 'terminal
+type ('nonterminal, 'terminal) parse_tree =
+    Node of 'nonterminal * ('nonterminal, 'terminal) parse_tree list
+  | Leaf of 'terminal
+val get_rhs_list : 'a -> ('a * 'b) list -> 'b list = <fun>
+val convert_grammar : 'a * ('b * 'c) list -> 'a * ('b -> 'c list) = <fun>
+val parse_tree_leaves : ('a, 'b) parse_tree -> 'b list = <fun>
+val match_empty : ('a -> 'b -> 'c) -> 'a -> 'b -> 'c = <fun>
+val match_nothing : 'a -> 'b -> 'c -> 'd option = <fun>
+val accept_empty_suffix : 'a -> 'b list -> ('a * 'b list) option = <fun>
+val get_prefix_suffix :
+  'a * ('a -> ('a, 'b) symbol list list) ->
+  ('a, 'b) symbol list list ->
+  (('a * ('a, 'b) symbol list) list -> 'b list -> 'c option) ->
+  ('a * ('a, 'b) symbol list) list -> 'b list -> 'c option = <fun>
+val make_matcher :
+  'a * ('a -> ('a, 'b) symbol list list) ->
+  ('b list -> 'c option) -> 'b list -> 'c option = <fun>
+val make_parser :
+  'a * ('a -> ('a, 'b) symbol list list) ->
+  'b list -> ('a, 'b) parse_tree option = <fun>
+
+
+# #use "hw2lzy.ml";;
+type ('nonterminal, 'terminal) symbol = N of 'nonterminal | T of 'terminal
+type ('nonterminal, 'terminal) parse_tree =
+    Node of 'nonterminal * ('nonterminal, 'terminal) parse_tree list
+  | Leaf of 'terminal
+val find_rules : 'a -> ('a * 'b) list -> 'b list = <fun>
+val convert_grammar : 'a * ('b * 'c) list -> 'a * ('b -> 'c list) = <fun>
+val parse_tree_list : ('a, 'b) parse_tree list -> 'b list = <fun>
+val parse_tree_leaves : ('a, 'b) parse_tree -> 'b list = <fun>
+val append_matchers :
+  (('a -> 'b) -> 'c -> 'd -> 'e) -> ('f -> 'a -> 'b) -> 'f -> 'c -> 'd -> 'e =
+  <fun>
+val match_rules :
+  'a ->
+  ('a -> ('a, 'b) symbol list list) ->
+  ('a, 'b) symbol list list ->
+  ('b list -> ('a * ('a, 'b) symbol list) list -> 'c option) ->
+  'b list -> ('a * ('a, 'b) symbol list) list -> 'c option = <fun>
+val match_individual :
+  ('a -> ('a, 'b) symbol list list) ->
+  ('a, 'b) symbol list ->
+  ('b list -> ('a * ('a, 'b) symbol list) list -> 'c option) ->
+  'b list -> ('a * ('a, 'b) symbol list) list -> 'c option = <fun>
+val accept_wrapper : ('a -> 'b option) -> 'a -> 'c -> 'b option = <fun>
+val make_matcher :
+  'a * ('a -> ('a, 'b) symbol list list) ->
+  ('b list -> 'c option) -> 'b list -> 'c option = <fun>
+val accept_empty : 'a list -> 'b -> 'b option = <fun>
+val make_used_rules :
+  'a * ('a -> ('a, 'b) symbol list list) ->
+  'b list -> ('a * ('a, 'b) symbol list) list option = <fun>
+val make_parallel :
+  ('a, 'b) symbol list ->
+  ('c * ('a, 'b) symbol list) list ->
+  ('c * ('a, 'b) symbol list) list * ('a, 'b) parse_tree list = <fun>
+val make_subtree :
+  ('a, 'b) symbol ->
+  ('c * ('a, 'b) symbol list) list ->
+  ('c * ('a, 'b) symbol list) list * ('a, 'b) parse_tree = <fun>
+val make_parser :
+  'a * ('a -> ('a, 'b) symbol list list) ->
+  'b list -> ('a, 'b) parse_tree option = <fun>

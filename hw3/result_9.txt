@@ -1,0 +1,134 @@
+8 thread Null 100000000 swaps:
+Threads average 33.0989 ns/transition
+Threads average 37.8965 ns/transition
+Threads average 40.1406 ns/transition
+Threads average 33.4021 ns/transition
+Threads average 37.1116 ns/transition
+
+8 thread Synchronized 100000000 swaps:
+Threads average 1650.52 ns/transition
+Threads average 1029.48 ns/transition
+Threads average 722.099 ns/transition
+Threads average 1261.86 ns/transition
+Threads average 872.094 ns/transition
+
+8 thread BetterSafe 100000000 swaps:
+Threads average 607.717 ns/transition
+Threads average 877.524 ns/transition
+Threads average 947.179 ns/transition
+Threads average 952.425 ns/transition
+Threads average 657.048 ns/transition
+
+8 thread Unsynchronized 100000000 swaps:
+Threads average 470.859 ns/transition
+sum mismatch (25585 != 17151)
+Threads average 438.348 ns/transition
+sum mismatch (25585 != 19033)
+Threads average 465.522 ns/transition
+sum mismatch (25585 != 14999)
+Threads average 334.045 ns/transition
+sum mismatch (25585 != 15094)
+Threads average 429.971 ns/transition
+sum mismatch (25585 != 19676)
+
+8 thread GetNSet 100000000 swaps:
+Threads average 583.968 ns/transition
+sum mismatch (25585 != 37835)
+Threads average 541.608 ns/transition
+sum mismatch (25585 != 37968)
+Threads average 614.266 ns/transition
+sum mismatch (25585 != 38175)
+Threads average 558.581 ns/transition
+sum mismatch (25585 != 36945)
+Threads average 547.835 ns/transition
+sum mismatch (25585 != 38280)
+
+16 thread Null 100000000 swaps:
+Threads average 67.6513 ns/transition
+Threads average 52.6095 ns/transition
+Threads average 66.7374 ns/transition
+Threads average 73.0167 ns/transition
+Threads average 73.8196 ns/transition
+
+16 thread Synchronized 100000000 swaps:
+Threads average 1252.65 ns/transition
+Threads average 1478.64 ns/transition
+Threads average 1447.34 ns/transition
+Threads average 2808.72 ns/transition
+Threads average 1429.25 ns/transition
+
+16 thread BetterSafe 100000000 swaps:
+Threads average 3601.56 ns/transition
+Threads average 1081.49 ns/transition
+Threads average 1389.60 ns/transition
+Threads average 1365.69 ns/transition
+Threads average 1303.33 ns/transition
+
+16 thread Unsynchronized 100000000 swaps:
+Threads average 908.369 ns/transition
+sum mismatch (25585 != 14778)
+Threads average 792.626 ns/transition
+sum mismatch (25585 != 14926)
+Threads average 770.161 ns/transition
+sum mismatch (25585 != 14690)
+Threads average 839.925 ns/transition
+sum mismatch (25585 != 13309)
+Threads average 561.594 ns/transition
+sum mismatch (25585 != 9274)
+
+16 thread GetNSet 100000000 swaps:
+Threads average 1411.44 ns/transition
+sum mismatch (25585 != 39699)
+Threads average 1895.43 ns/transition
+sum mismatch (25585 != 29725)
+Threads average 1506.21 ns/transition
+sum mismatch (25585 != 40121)
+Threads average 1536.70 ns/transition
+sum mismatch (25585 != 40396)
+Threads average 1289.91 ns/transition
+sum mismatch (25585 != 38226)
+
+32 thread Null 100000000 swaps:
+Threads average 499.404 ns/transition
+Threads average 345.919 ns/transition
+Threads average 258.293 ns/transition
+Threads average 206.814 ns/transition
+Threads average 483.064 ns/transition
+
+32 thread Synchronized 100000000 swaps:
+Threads average 1717.29 ns/transition
+Threads average 1456.28 ns/transition
+Threads average 1629.71 ns/transition
+Threads average 4312.63 ns/transition
+Threads average 3607.62 ns/transition
+
+32 thread BetterSafe 100000000 swaps:
+Threads average 12830.3 ns/transition
+Threads average 7112.61 ns/transition
+Threads average 10202.6 ns/transition
+Threads average 12647.5 ns/transition
+Threads average 17235.7 ns/transition
+
+32 thread Unsynchronized 100000000 swaps:
+Threads average 2277.81 ns/transition
+sum mismatch (25585 != 14524)
+Threads average 1847.82 ns/transition
+sum mismatch (25585 != 14212)
+Threads average 1617.74 ns/transition
+sum mismatch (25585 != 14598)
+Threads average 1921.09 ns/transition
+sum mismatch (25585 != 13496)
+Threads average 1731.62 ns/transition
+sum mismatch (25585 != 13829)
+
+32 thread GetNSet 100000000 swaps:
+Threads average 2159.42 ns/transition
+sum mismatch (25585 != 38532)
+Threads average 2237.97 ns/transition
+sum mismatch (25585 != 39476)
+Threads average 2100.16 ns/transition
+sum mismatch (25585 != 35623)
+Threads average 2079.76 ns/transition
+sum mismatch (25585 != 39171)
+Threads average 2318.05 ns/transition
+sum mismatch (25585 != 34695)

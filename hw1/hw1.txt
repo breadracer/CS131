@@ -1,0 +1,33 @@
+Report for homework 1
+
+subset: I use recursion to traverse the candidate subset and check if each element is in the
+other set.
+
+equal_sets: I just check whether the two sets are subsets of each other. This is the
+simplest way to do this I could think of based on the mathematical definition of equal sets.
+
+set_union: I recursively traverse the two sets and concat each element to the resulting new
+set.
+
+set_intersection: I recursively traverse the first set and concat a list of element in the
+second set that are not contained in the second set.
+
+set_diff: I recursively traverse the first set and for each of the element I check whether
+it is contained in the second set. If it is not, concat it to the resulting set.
+
+computed_fixed_point: I just recursively (infinitely) apply function f to x until the
+condition (eq (f x) x) is met.
+
+filter_reachable: I write another recursive function called find_reachable to scan the rule
+list from the start symbol, and return a list of nonterminals that is reachable, by
+recursively follow the start symbol in the rule list and recursively call the function on
+each of the reachable nonterminals. Then, I filter out the reachables returned by this
+function from the whole rule list in filter_reachable, which returns the desired result.
+
+Summary for the methodology:
+For the first 5 functions regarding set operations and the 6th one regarding computation of
+fixed points, I basically use recursion or other written funcions in most of these to
+shorten the code and to enhance readability. The implementation of the last function
+consists a helper function and a lot of local functions to support recursion. I thought of
+using several smaller functions to implement this, but I finally choose this approach since
+it can best support the recursion functionality.

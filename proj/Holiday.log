@@ -1,0 +1,13 @@
+Serving on 127.0.0.1 12284
+Received "TEST" from 127.0.0.1 37506
+Sent "SUCCESS" to 127.0.0.1 37506
+Close the connection with 127.0.0.1 37506
+Received "FLOOD +0.000458479 shawn +34.068930-118.445127 1559628593.035082340 {"Holiday":{"Goloman":{"Hands":{}},"Wilkes":{}}} Holiday" from 127.0.0.1 37510
+Sent "FLOOD +0.000458479 shawn +34.068930-118.445127 1559628593.035082340 {"Holiday":{"Goloman":{"Hands":{}},"Wilkes":{}}} Holiday Goloman" to Goloman
+Received "FLOOD succeeded" from Goloman
+Close the connection with Goloman
+Sent "FLOOD +0.000458479 shawn +34.068930-118.445127 1559628593.035082340 {"Holiday":{"Goloman":{"Hands":{}},"Wilkes":{}}} Holiday Wilkes" to Wilkes
+Received "FLOOD succeeded" from Wilkes
+Close the connection with Wilkes
+Sent "FLOOD succeeded" to 127.0.0.1 37510
+Close the connection with 127.0.0.1 37510

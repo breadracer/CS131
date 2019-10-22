@@ -1,0 +1,55 @@
+Essentially my make_parser is written in two parts. One parts is to
+call a function called get_prefix_suffix, which is basically the
+main part of my make_matcher function.
+
+The get_prefix_suffix function is a mutually recursive function
+with a local function inside it called scan_rule. Basically, this
+organization of algorithm is inspired by the hint code provided
+both in the specification of the project and the TA's slides from
+my discussion session, in which the key idea is to pass a previous
+outcome of a matcher (a pattern successfully be matched) to an
+acceptor function, and then take the outcome of which to the matcher
+function.
+
+In detail, get_prefix_suffix will scan the rules derived from
+the production function of the nonterminal, starting from the
+starting point of the input grammar.
+
+Once it reaches a nonterminal, it will do a depth-first-search like
+algorithm start from that nonterminal as the root and by passing it
+to the production function to try to match other derived part. This
+is done by passing the resulting rules from the production function
+on this particular nonterminal, the new acceptor which is the result
+of calling scan_rule with the rest of the rule and the current
+acceptor, and the fragment itself.
+
+Once it reaches a terminal, it will compare the terminal value to the
+first element of the input fragment. If they are the same, basically
+it will recursively call the scan_rule on the rest of the fragment
+and the rest of the rule in the current context of right-hand-side.
+
+The get_prefix_suffix function will also carrying the resulting parts
+of matched suffix, both terminals and nonterminals, during multiple
+recursive calls, so the result of get_prefix_suffix is both the matched
+prefix and the suffix in a tuple. The make_matcher function is basically
+taking the suffix part of the get_prefix_suffix. and the make_parser
+function's first part is taking the prefix part as the input of its
+second part. The second part of make_parser is taking the prefix list
+and do a depth-first-search on each of its pairs of rules, and this
+is using a similar idea of the previous mutual recursion algorithm.
+It will recursively try to construct tree on the current nonterminal-
+right-hand-size pair and call the second recursive function
+search_on_node on the rest of the rules to try to consume the rest of
+the rules as much as possible.
+
+In the implementation part, since in ocaml the each function's return
+type must be the same under different circumstances. Since my
+implementaion of acceptor is also taking a prefix as an argument, which
+is different from what the spec which does not, I write a customized
+function called make_accept inside make_matcher to convert the acceptor
+type in the spec to suit my use by letting it takes another argument
+and return another type that includes prefix.
+
+However this naive implementaion of parser does not met the requirment
+of parsing more complex grammars. For example it can only handle the
+context-free grammars.
