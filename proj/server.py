@@ -6,8 +6,8 @@ import json
 import time
 import sys
 
-base_url = 'https://maps.googleapis.com/maps/api/place/nearbysearch'
-API_KEY = 'AIzaSyCan3J0ED6NC5wX7hR6cNAUZ0AqZLoetGs'
+base_url = '***'
+API_KEY = '***'
 
 servers = {
     'Goloman':{
